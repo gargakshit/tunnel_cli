@@ -8,7 +8,7 @@ console.log(chalk.bold.blue("PaperPlane Tunnel CLI v1.1"));
 const port = argv.port;
 const baseUrl = argv.host || "tunnel.paperplane.ml:50002";
 const protocol = argv.protocol || "http";
-const wsUrl = argv.sockets || "ws://localhost:10002";
+const wsUrl = argv.sockets || "ws://tunnel.paperplane.ml:10002";
 
 if (port === undefined || typeof port !== "number") {
   console.log(chalk.bold("USAGE:"));
