@@ -1,0 +1,25 @@
+{
+  "name": "@paperplane/tunnel_cli",
+  "version": "1.0.0",
+  "description": "CLI for PaperPlane tunnel",
+  "main": "index.js",
+  "author": "Akshit Garg <garg.akshit@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "pkg": {
+    "scripts": "modules/**/*.js"
+  },
+  "scripts": {
+    "build:macos": "yarn pkg index.js --target macos --output build/macos/pptnl",
+    "build:linux": "yarn pkg index.js --target linux --output build/linux/pptnl",
+    "build:win": "yarn pkg index.js --target win --output build/win/pptnl.exe",
+    "build": "yarn build:macos && yarn build:linux && yarn build:win"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "pkg": "^4.4.9",
+    "websocket": "^1.0.31",
+    "yargs": "^15.4.1"
+  }
+}
